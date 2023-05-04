@@ -73,7 +73,7 @@ Clique no link `Info` ao lado da configuração para entender melhor o que cada 
 Após ter criado a fila copie o URL gerado no final.
 
 ## Criando o _service_ de comunicação com o Amazon SQS
-Para facilitar a comunicação da nossa aplicação com o `Amazon SQS`, vamos criar um **service** que terá três funções principais: enviar uma mensagem para a fila, recuperar mensagens da fila e deletar mensagens da fila.
+Para facilitar a comunicação da nossa aplicação com o `Amazon SQS`, vamos criar um **service**, dentro da pasta `src/service`, que terá três funções principais: enviar uma mensagem para a fila, recuperar mensagens da fila e deletar mensagens da fila.
 
 Esse **service** será útil para desacoplar o _SQS_ da nossa aplicação, permitindo que ele seja facilmente adaptado para funcionar com outros serviços de fila também.
 
