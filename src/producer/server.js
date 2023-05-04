@@ -6,14 +6,14 @@ const port = config.producerPort
 
 app.use(express.json())
 
-app.post('/transfer', async(req, res) => {
+app.post('/request-transfer', async(req, res) => {
     const { 
         fromAccount,
         toAccount,
         amount
     } = req.body;
 
-    let responseTransaction = await fetch(`http://localhost:${config.consumerPort}/pay`, {
+    let responseTransaction = await fetch(`http://localhost:${config.consumerPort}/process-transfer`, {
         method: 'POST',
         body: JSON.stringify({ fromAccount, toAccount, amount }), 
         headers: { 'Content-Type': 'application/json' }

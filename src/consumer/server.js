@@ -6,7 +6,7 @@ export const port = config.consumerPort
 
 app.use(express.json())
 
-app.post('/pay', (req, res) => {
+app.post('/process-transfer', (req, res) => {
     const { 
         fromAccount,
         toAccount,
